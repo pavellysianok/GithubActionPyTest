@@ -1,0 +1,14 @@
+name: Scala formatter
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  scalafmt:
+    runs-on: [self-hosted, linux]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check for scalafmt conformance
+      uses: openlawteam/scalafmt-ci@v2
