@@ -6,7 +6,7 @@ package org.scalafmt
 
            def toEither: Either[Throwable, String] = this match {
                   case Formatted.Success(s) => Right(s)
-              case Formatted.Failure(e) => Left(e)      // too much space before comment
+             case Formatted.Failure(e) => Left(e)      // too much space before comment
                        }
 
                     def get: String = this match {
@@ -18,8 +18,8 @@ package org.scalafmt
 /** Al  igned by first asterisk, default ScalaDoc style is second.
  *
  */
-                    object Formatted                        {
+                   object Formatted                        {
                                              case class Success(formattedCode: String) extends Formatted
-                    case class Failure(e: Throwable) extends Formatted
+                   case class Failure(e: Throwable) extends Formatted
              }
 hjkjkj
