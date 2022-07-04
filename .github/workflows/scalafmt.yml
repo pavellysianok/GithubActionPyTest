@@ -22,4 +22,4 @@ jobs:
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help
         branchname=$(git describe --contains --all HEAD)
-        scalafmt-native --test --diff-branch $branchname
+        scalafmt-native --test --diff-branch main
