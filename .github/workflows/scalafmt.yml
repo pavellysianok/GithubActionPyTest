@@ -18,3 +18,4 @@ jobs:
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help # should show version 3.5.8
         scalafmt-native -v
+        scalafmt-native sample.scala
