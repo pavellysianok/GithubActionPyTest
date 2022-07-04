@@ -11,14 +11,14 @@ package org.scalafmt
 
                def get: String = this match {
       case Formatted.Success(code) => code
-    case Formatted.Failure(e) => throw e
+        case Formatted.Failure(e) => throw e
   }
 }
 
 /** Aligned by first asterisk, default ScalaDoc style is second.
  *
  */
-      object Formatted                        {
+                                         object Formatted                        {
          case class Success(formattedCode: String) extends Formatted
              case class Failure(e: Throwable) extends Formatted
                }
