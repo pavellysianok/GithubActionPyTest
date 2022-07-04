@@ -2,7 +2,7 @@
 messiness added to it. -mroth */
 package org.scalafmt
 
-sealed abstract class Formatted {
+    sealed abstract class Formatted {
 
             def toEither: Either[Throwable, String] = this match {
                    case Formatted.Success(s) => Right(s)
