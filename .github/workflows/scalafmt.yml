@@ -17,4 +17,4 @@ jobs:
         curl https://raw.githubusercontent.com/scalameta/scalafmt/master/bin/install-scalafmt-native.sh | \
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native -v
-        scalafmt-native --check sample.scala
+        scalafmt-native --test sample.scala
