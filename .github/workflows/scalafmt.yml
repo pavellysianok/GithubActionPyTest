@@ -2,8 +2,12 @@ name: Scala formatter
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**.scala'
   pull_request:
     branches: [ main ]
+    paths:
+      - '**.scala'
 
 jobs:
   scalafmt:
