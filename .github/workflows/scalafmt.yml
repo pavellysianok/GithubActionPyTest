@@ -1,7 +1,7 @@
 name: Scala formatter
 on:
   push:
-    branches: [ main ]
+    branches: [ fix/ADP-0000 ]
     paths:
       - '**.scala'
   pull_request:
