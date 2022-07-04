@@ -22,4 +22,5 @@ jobs:
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help
         branchname=$(git describe --contains --all HEAD)
-        scalafmt-native --test --diff-branch origin/HEAD
+        filename=$((git diff --name-only --diff-filter=d origin/HEAD) | grep .scala)
+        scalafmt-native --test $filename
