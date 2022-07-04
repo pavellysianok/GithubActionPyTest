@@ -7,7 +7,7 @@ package org.scalafmt
            def toEither: Either[Throwable, String] = this match {
                   case Formatted.Success(s) => Right(s)
          case Formatted.Failure(e) => Left(e)      // too much space before comment
-                       }
+                 }
 
                        def get: String = this match {
             case Formatted.Success(code) => code
