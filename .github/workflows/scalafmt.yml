@@ -24,4 +24,4 @@ jobs:
         branchname=$(git describe --contains --all HEAD)
         git remote update
         git fetch
-        scalafmt-native --mode changed
+        scalafmt-native --diff-branch main
