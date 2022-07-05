@@ -25,4 +25,4 @@ jobs:
         scalafmt-native --help
         branchname=$(git describe --contains --all HEAD)
         filename=$(git diff --name-only --diff-filter=d main)
-        scalafmt-native --test $filename
+        scalafmt-native --test --diff-branch 2.x
