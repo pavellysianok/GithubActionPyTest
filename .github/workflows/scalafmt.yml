@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 1
+        path: main
     - name: Check for scalafmt conformance
       run: |
         VERSION=3.5.8
