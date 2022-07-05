@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Check for scalafmt conformance
       run: |
-        VERSION=3.4.3
+        VERSION=3.5.8
         INSTALL_LOCATION=/usr/local/bin/scalafmt-native
         curl https://raw.githubusercontent.com/scalameta/scalafmt/master/bin/install-scalafmt-native.sh | \
         bash -s -- $VERSION $INSTALL_LOCATION
