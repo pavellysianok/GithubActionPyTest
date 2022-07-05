@@ -22,7 +22,5 @@ jobs:
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help
         branchname=$(git describe --contains --all HEAD)
-        git remote update
-        git fetch
-        git diff --name-only --diff-filter=d origin/main...
-        scalafmt-native --diff-branch main...
+        filename=$(git diff --name-only --diff-filter=d main)
+        scalafmt-native --test $filename
