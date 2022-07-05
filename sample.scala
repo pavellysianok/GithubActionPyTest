@@ -10,7 +10,7 @@ package org.scalafmt
                  }
 tt
                def get: String = this match {
-                    case Formatted.Success(code) => code
+                        case Formatted.Success(code) => code
         case Formatted.Failure(e) => throw e
   }
 }
