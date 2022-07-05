@@ -22,5 +22,4 @@ jobs:
         INSTALL_LOCATION=/usr/local/bin/scalafmt-native
         curl https://raw.githubusercontent.com/scalameta/scalafmt/master/bin/install-scalafmt-native.sh | \
         bash -s -- $VERSION $INSTALL_LOCATION
-        scalafmt-native -i -f 'git diff --name-only'
         scalafmt-native --test
