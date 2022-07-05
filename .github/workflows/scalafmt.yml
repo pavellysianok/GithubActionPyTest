@@ -23,4 +23,4 @@ jobs:
         curl https://raw.githubusercontent.com/scalameta/scalafmt/master/bin/install-scalafmt-native.sh | \
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help
-        scalafmt-native --test --diff-branch HEAD~1
+        scalafmt-native --test --mode diff
