@@ -25,4 +25,4 @@ jobs:
         scalafmt-native --help
         branchname=$(git describe --contains --all HEAD)
         echo $branchname
-        scalafmt-native --test
+        scalafmt-native --test $branchname
