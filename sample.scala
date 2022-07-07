@@ -17,7 +17,7 @@ tt                  def get: String = this match {
 /** Al  igned by first asterisk, default ScalaDoc style is second.
  *
  */
-                 object Formatted                        {
+               object Formatted                        {
             case class Success(formattedCode: String) extends Formatted
             case class Failure(e: Throwable) extends Formatted
              }
