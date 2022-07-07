@@ -24,6 +24,6 @@ jobs:
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help
         echo $branchname
-        scalafmt-native --mode changed
+        echo "scalafmt-native --mode changed"
         echo "Hi"
         scalafmt-native --reportError | git show --name-only | grep ".scala"
