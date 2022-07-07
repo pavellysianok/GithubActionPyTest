@@ -25,4 +25,4 @@ jobs:
         scalafmt-native --help
         branchname=$(git describe --contains --all HEAD)
         echo $branchname
-        scalafmt-native --test | git show --name-only | grep ".scala"
+        scalafmt-native --test --reportError | git show --name-only | grep ".scala"
