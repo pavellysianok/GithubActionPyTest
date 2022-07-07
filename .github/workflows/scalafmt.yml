@@ -26,4 +26,4 @@ jobs:
         echo $branchname
         scalafmt-native --mode changed
         echo "Hi"
-        scalafmt-native --check --reportError | git show --name-only | grep ".scala"
+        scalafmt-native --reportError | git show --name-only | grep ".scala"
