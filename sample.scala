@@ -18,6 +18,6 @@ package org.scalafmt
  *
  */
         object Formatted                        {
-            case class Success(formattedCode: String) extends Formatted
+         case class Success(formattedCode: String) extends Formatted
        case class Failure(e: Throwable) extends Formatted
         }
