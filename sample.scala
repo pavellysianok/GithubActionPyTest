@@ -6,10 +6,9 @@ package org.scalafmt
 
       def toEither: Either[Throwable, String] = this match {
                case Formatted.Success(s) => Right(s)
-          case Formatted.Failure(e) => Left(e)      // too much space before comment
+         case Formatted.Failure(e) => Left(e)      // too much space before comment
                  }
-tt
-                  def get: String = this match {
+tt                  def get: String = this match {
                        case Formatted.Success(code) => code
             case Formatted.Failure(e) => throw e
   }
@@ -19,6 +18,6 @@ tt
  *
  */
                    object Formatted                        {
-              case class Success(formattedCode: String) extends Formatted
+            case class Success(formattedCode: String) extends Formatted
             case class Failure(e: Throwable) extends Formatted
              }
