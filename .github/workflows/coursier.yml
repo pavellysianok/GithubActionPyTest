@@ -22,6 +22,6 @@ jobs:
         INSTALL_LOCATION=/usr/local/bin/scalafmt-native
         curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
         sudo chmod +x cs
-        ./cs setup
+        sudo ./cs setup
         cs install scalafmt
         cs launch scalafmt -- --help
