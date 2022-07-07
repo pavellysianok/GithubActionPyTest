@@ -24,4 +24,4 @@ jobs:
         sudo chmod +x cs
         ./cs setup
         cs install scalafmt
-        cs launch org.scalameta::scalafmt-cli:3.5.8 -- --help
+        cs launch scalafmt -- --help
