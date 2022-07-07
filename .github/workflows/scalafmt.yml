@@ -18,12 +18,9 @@ jobs:
         fetch-depth: 1
     - name: Check for scalafmt conformance
       run: |
-        sudo apt install maven -y
-        mvn -version
         VERSION=3.5.8
         INSTALL_LOCATION=/usr/local/bin/scalafmt-native
         curl https://raw.githubusercontent.com/scalameta/scalafmt/master/bin/install-scalafmt-native.sh | \
         bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help
-        mvn scalafmt:format
-        scalafmt-native --check --reportError
+        scalafmt-native --diff --cached
