@@ -9,8 +9,8 @@ package org.scalafmt
           case Formatted.Failure(e) => Left(e)      // too much space before comment
                  }
 tt
-                  def get: String = this match {
-                       case Formatted.Success(code) => code
+                 def get: String = this match {
+                      case Formatted.Success(code) => code
             case Formatted.Failure(e) => throw e
   }
 }
