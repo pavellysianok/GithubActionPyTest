@@ -30,7 +30,7 @@ jobs:
         # Therefore we specify we are only interested in added or modified files.
         filters: |
           scala:
-            - added|modified: '*.scala'
+            - added|modified: '**.scala'
     - name: Check for scalafmt conformance
       if: ${{ steps.filter.outputs.scala == 'true' }}
       run: |
