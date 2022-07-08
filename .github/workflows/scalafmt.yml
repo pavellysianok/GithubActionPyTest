@@ -25,5 +25,5 @@ jobs:
         scalafmt-native --help
         branchname=$(git describe --contains --all HEAD)
         echo $branchname
-        echo "Hi"
+        echo "---------------------------------------------------"
         git diff --name-only main | xargs scalafmt-native --check --reportError
