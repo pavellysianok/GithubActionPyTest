@@ -26,4 +26,4 @@ jobs:
         branchname=$(git describe --contains --all HEAD)
         echo $branchname
         echo "---------------------------------------------------"
-        git diff --name-only main | xargs scalafmt-native --check --reportError
+        git diff --name-only | xargs scalafmt-native --check --reportError
