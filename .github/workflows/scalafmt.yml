@@ -37,7 +37,7 @@ jobs:
         VERSION=3.5.8
         INSTALL_LOCATION=/usr/bin/scalafmt-native
         curl https://raw.githubusercontent.com/scalameta/scalafmt/master/bin/install-scalafmt-native.sh | \
-        bash -s -- $VERSION $INSTALL_LOCATION
+        sudo bash -s -- $VERSION $INSTALL_LOCATION
         scalafmt-native --help
         echo "---------------------------------------------------"
         scalafmt-native ${{ steps.filter.outputs.markdown_files }} --check --reportError
