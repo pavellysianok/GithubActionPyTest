@@ -24,6 +24,7 @@ jobs:
         # Paths will be escaped and space-delimited.
         # Output is usable as command-line argument list in Linux shell
         list-files: shell
+        fetch-depth: 10
 
         # In this example changed files will be checked by linter.
         # It doesn't make sense to lint deleted files.
